@@ -96,7 +96,7 @@ if (lager_BUILD_DOCS)
 endif()
 
 configure_file(lager/config.hpp.in
-  "${CMAKE_SOURCE_DIR}/lager/config.hpp")
+  "${CMAKE_CURRENT_LIST_DIR}/lager/config.hpp")
 
 install(EXPORT LagerConfig DESTINATION lib/cmake/Lager)
 install(DIRECTORY lager DESTINATION include)
