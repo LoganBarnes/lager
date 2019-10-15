@@ -18,6 +18,8 @@ option(lager_BUILD_TESTS "Build tests" ON)
 option(lager_BUILD_EXAMPLES "Build examples" ON)
 option(lager_BUILD_DOCS "Build docs" ON)
 
+include(cmake/ThirdParty.cmake)
+
 #  Targets
 #  =======
 
@@ -27,6 +29,7 @@ target_include_directories(lager INTERFACE
   $<BUILD_INTERFACE:${lager_BINARY_DIR}/>
   $<BUILD_INTERFACE:${lager_SOURCE_DIR}/>
   $<INSTALL_INTERFACE:include>)
+target_link_libraries(lager INTERFACE zug)
 
 install(TARGETS lager EXPORT LagerConfig)
 
