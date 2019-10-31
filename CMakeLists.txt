@@ -17,6 +17,8 @@ option(lager_BUILD_TESTS "Build tests" ON)
 option(lager_BUILD_EXAMPLES "Build examples" ON)
 option(lager_BUILD_DOCS "Build docs" ON)
 
+include(cmake/ThirdParty.cmake)
+
 find_program(CCACHE ccache)
 if (CCACHE)
   message(STATUS "Using ccache: ${CCACHE}")
